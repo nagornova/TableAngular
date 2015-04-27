@@ -1,0 +1,39 @@
+﻿<html ng-app="crudModule">
+@{
+    ViewBag.Title = "Course Table";
+}
+
+<head title="">
+
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/Scripts/MyScripts/Module.js"></script>
+    <script src="~/Scripts/MyScripts/Service.js"></script>
+    <script src="~/Scripts/MyScripts/Controller.js"></script>
+
+</head>
+<body>
+    <h2>Course Table</h2>
+    <table ng-controller="crudController" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Teacher</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="course in Courses">
+                <td>{{course.Title}}</td>
+                <td>{{course.Teacher}}</td>
+                <td>{{course.Duration}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+
+
+
